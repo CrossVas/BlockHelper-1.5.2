@@ -1,0 +1,147 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 4/20/24 8:57 AM
+Description: Ticking entity
+
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    net/minecraft/enchantment/EnchantmentHelper.buildEnchantmentList(Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Ljava/util/List; @7: invokestatic
+  Reason:
+    Type 'net/minecraft/item/ItemStack' (current frame, stack[1]) is not assignable to 'java/lang/Integer'
+  Current Frame:
+    bci: @7
+    flags: { }
+    locals: { 'java/util/Random', 'net/minecraft/item/ItemStack', integer, 'net/minecraft/item/Item' }
+    stack: { 'net/minecraft/item/Item', 'net/minecraft/item/ItemStack' }
+  Bytecode:
+    0x0000000: 2bb6 012a 4e2d 2bb8 015a 3604 1504 9d00
+    0x0000010: 0501 b015 0405 6c36 0404 2a15 0404 7a04
+    0x0000020: 60b6 00d9 602a 1504 047a 0460 b600 d960
+    0x0000030: 3604 1504 1c60 3605 2ab6 015e 2ab6 015e
+    0x0000040: 620c 6613 015f 6a38 0615 0586 0c17 0662
+    0x0000050: 6a13 0160 628b 3607 1507 04a2 0006 0436
+    0x0000060: 0701 3a08 1507 2bb8 0164 3a09 1909 c600
+    0x0000070: dd19 09b9 0167 0100 9a00 d32a 1909 b901
+    0x0000080: 6b01 00b8 0171 c000 853a 0a19 0ac6 00be
+    0x0000090: bb01 7359 b701 743a 0819 0819 0ab6 0178
+    0x00000a0: 5715 0736 0b2a 1032 b600 d915 0ba3 009e
+    0x00000b0: 1909 b900 6301 00b9 0069 0100 3a0c 190c
+    0x00000c0: b900 6f01 0099 005b 190c b900 7301 00c0
+    0x00000d0: 004e 3a0d 0436 0e19 08b6 0179 3a0f 190f
+    0x00000e0: b900 6f01 0099 0029 190f b900 7301 00c0
+    0x00000f0: 0085 3a10 1910 b401 49b2 00b6 190d b600
+    0x0000100: 7632 b601 7d99 0006 a7ff d603 360e 150e
+    0x0000110: 9a00 0d19 0cb9 0180 0100 a700 03a7 ffa1
+    0x0000120: 1909 b901 6701 009a 001b 2a19 09b9 016b
+    0x0000130: 0100 b801 71c0 0085 3a0d 1908 190d b601
+    0x0000140: 7857 150b 047a 360b a7ff 5d19 08b0     
+  Stackmap Table:
+    full_frame(@19,{Object[#213],Object[#21],Integer,Object[#65],Integer},{Object[#65]})
+    full_frame(@97,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer},{Object[#65]})
+    full_frame(@165,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer},{Object[#65]})
+    full_frame(@190,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    full_frame(@222,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    full_frame(@267,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107],Object[#133]},{Object[#65]})
+    full_frame(@270,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@285,Object[#65])
+    full_frame(@288,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@322,Object[#65])
+    full_frame(@331,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95]},{Object[#65]})
+
+	at net.minecraft.entity.EntityLiving.applyPotionDamageCalculations(EntityLiving.java:1223)
+	at net.minecraft.entity.EntityLiving.damageEntity(EntityLiving.java:1256)
+	at net.minecraft.entity.EntityLiving.attackEntityFrom(EntityLiving.java:1060)
+	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:45)
+	at net.minecraft.entity.monster.EntityEnderman.attackEntityFrom(EntityEnderman.java:471)
+	at net.minecraft.entity.monster.EntityEnderman.onLivingUpdate(EntityEnderman.java:136)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:858)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:31)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2342)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:717)
+	at net.minecraft.world.World.updateEntity(World.java:2304)
+	at net.minecraft.world.World.updateEntities(World.java:2150)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:546)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:654)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:573)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:127)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:573)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.entity.EntityLiving.applyPotionDamageCalculations(EntityLiving.java:1223)
+	at net.minecraft.entity.EntityLiving.damageEntity(EntityLiving.java:1256)
+	at net.minecraft.entity.EntityLiving.attackEntityFrom(EntityLiving.java:1060)
+	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:45)
+	at net.minecraft.entity.monster.EntityEnderman.attackEntityFrom(EntityEnderman.java:471)
+	at net.minecraft.entity.monster.EntityEnderman.onLivingUpdate(EntityEnderman.java:136)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:858)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:31)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2342)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:717)
+	at net.minecraft.world.World.updateEntity(World.java:2304)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Enderman (net.minecraft.entity.monster.EntityEnderman)
+	Entity ID: 326
+	Entity Name: Enderman
+	Entity's Exact location: 252.93, 33.54, 275.70
+	Entity's Block location: World: (252,33,275), Chunk: (at 12,2,3 in 15,17; contains blocks 240,0,272 to 255,255,287), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: -0.03, -0.30, 0.02
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2150)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:546)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['quaternary'/409, l='New World', x=169.30, y=64.00, z=260.11]]
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: 1496166129824307096
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (172,64,260), Chunk: (at 12,4,4 in 10,16; contains blocks 160,0,256 to 175,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 497 game time, 497 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 144269 (now: false), thunder time: 166522 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:654)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:573)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:127)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:573)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.5.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_402, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 886595120 bytes (845 MB) / 1034420224 bytes (986 MB) up to 7615283200 bytes (7262 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 5066 (283696 bytes; 0 MB) allocated, 3811 (213416 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 3, tallocated: 63
+	FML: MCP v7.51 FML v5.2.23.738 Minecraft Forge 7.8.1.738 8 mods loaded, 8 mods active
+	mcp{7.51} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{5.2.23.738} [Forge Mod Loader] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{7.8.1.738} [Minecraft Forge] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHFramework{1.5.2.5} [CoFH Framework] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{1.117.385-lf} [IndustrialCraft 2] (industrialcraft-2_1.117.385-lf.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	mod_BlockHelper{1.2.0-pre3} [Block Helper] (BlockHelper-1.5.2-1.2.0-pre3-dev.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHWorld{1.5.2.5} [CoFHWorld] (CoFHCore-1.5.2.5.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHCore{1.5.2.5} [CoFHCore] (CoFHCore-1.5.2.5.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 1227 (68712 bytes; 0 MB) allocated, 1082 (60592 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['quaternary'/409, l='New World', x=169.30, y=64.00, z=260.11]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

@@ -1,0 +1,139 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 4/20/24 8:56 AM
+Description: Ticking entity
+
+java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    net/minecraft/enchantment/EnchantmentHelper.buildEnchantmentList(Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Ljava/util/List; @7: invokestatic
+  Reason:
+    Type 'net/minecraft/item/ItemStack' (current frame, stack[1]) is not assignable to 'java/lang/Integer'
+  Current Frame:
+    bci: @7
+    flags: { }
+    locals: { 'java/util/Random', 'net/minecraft/item/ItemStack', integer, 'net/minecraft/item/Item' }
+    stack: { 'net/minecraft/item/Item', 'net/minecraft/item/ItemStack' }
+  Bytecode:
+    0x0000000: 2bb6 012a 4e2d 2bb8 015a 3604 1504 9d00
+    0x0000010: 0501 b015 0405 6c36 0404 2a15 0404 7a04
+    0x0000020: 60b6 00d9 602a 1504 047a 0460 b600 d960
+    0x0000030: 3604 1504 1c60 3605 2ab6 015e 2ab6 015e
+    0x0000040: 620c 6613 015f 6a38 0615 0586 0c17 0662
+    0x0000050: 6a13 0160 628b 3607 1507 04a2 0006 0436
+    0x0000060: 0701 3a08 1507 2bb8 0164 3a09 1909 c600
+    0x0000070: dd19 09b9 0167 0100 9a00 d32a 1909 b901
+    0x0000080: 6b01 00b8 0171 c000 853a 0a19 0ac6 00be
+    0x0000090: bb01 7359 b701 743a 0819 0819 0ab6 0178
+    0x00000a0: 5715 0736 0b2a 1032 b600 d915 0ba3 009e
+    0x00000b0: 1909 b900 6301 00b9 0069 0100 3a0c 190c
+    0x00000c0: b900 6f01 0099 005b 190c b900 7301 00c0
+    0x00000d0: 004e 3a0d 0436 0e19 08b6 0179 3a0f 190f
+    0x00000e0: b900 6f01 0099 0029 190f b900 7301 00c0
+    0x00000f0: 0085 3a10 1910 b401 49b2 00b6 190d b600
+    0x0000100: 7632 b601 7d99 0006 a7ff d603 360e 150e
+    0x0000110: 9a00 0d19 0cb9 0180 0100 a700 03a7 ffa1
+    0x0000120: 1909 b901 6701 009a 001b 2a19 09b9 016b
+    0x0000130: 0100 b801 71c0 0085 3a0d 1908 190d b601
+    0x0000140: 7857 150b 047a 360b a7ff 5d19 08b0     
+  Stackmap Table:
+    full_frame(@19,{Object[#213],Object[#21],Integer,Object[#65],Integer},{Object[#65]})
+    full_frame(@97,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer},{Object[#65]})
+    full_frame(@165,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer},{Object[#65]})
+    full_frame(@190,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    full_frame(@222,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    full_frame(@267,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107],Object[#133]},{Object[#65]})
+    full_frame(@270,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@285,Object[#65])
+    full_frame(@288,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@322,Object[#65])
+    full_frame(@331,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95]},{Object[#65]})
+
+	at net.minecraft.entity.EntityLiving.decreaseAirSupply(EntityLiving.java:732)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:607)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:455)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:823)
+	at net.minecraft.entity.passive.EntityBat.onUpdate(EntityBat.java:106)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2342)
+	at net.minecraft.world.World.updateEntity(World.java:2304)
+	at net.minecraft.world.World.updateEntities(World.java:2150)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1853)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:835)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:760)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.entity.EntityLiving.decreaseAirSupply(EntityLiving.java:732)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:607)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:455)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:823)
+	at net.minecraft.entity.passive.EntityBat.onUpdate(EntityBat.java:106)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2342)
+	at net.minecraft.world.World.updateEntity(World.java:2304)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Bat (net.minecraft.entity.passive.EntityBat)
+	Entity ID: 156
+	Entity Name: Bat
+	Entity's Exact location: 136.02, 15.00, 235.88
+	Entity's Block location: World: (136,15,235), Chunk: (at 8,0,11 in 8,14; contains blocks 128,0,224 to 143,255,239), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.02, -0.02, 0.07
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2150)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['quaternary'/410, l='MpServer', x=169.30, y=65.62, z=260.11]]
+	Chunk stats: MultiplayerChunkCache: 30
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (172,64,260), Chunk: (at 12,4,4 in 10,16; contains blocks 160,0,256 to 175,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 485 game time, 485 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 37 total; [EntityZombie['Zombie'/257, l='MpServer', x=209.50, y=14.00, z=235.50], EntityMinecartChest['entity.MinecartChest.name'/258, l='MpServer', x=223.50, y=30.85, z=237.50], EntityItem['item.tile.rail'/259, l='MpServer', x=222.81, y=30.13, z=224.88], EntityItem['item.tile.rail'/260, l='MpServer', x=223.94, y=30.13, z=226.47], EntitySheep['Sheep'/261, l='MpServer', x=214.47, y=67.00, z=239.47], EntitySheep['Sheep'/262, l='MpServer', x=211.50, y=66.00, z=239.50], EntityMinecartChest['entity.MinecartChest.name'/263, l='MpServer', x=213.50, y=29.85, z=240.50], EntitySheep['Sheep'/264, l='MpServer', x=211.50, y=67.00, z=242.50], EntitySheep['Sheep'/265, l='MpServer', x=215.81, y=67.00, z=240.81], EntitySkeleton['Skeleton'/266, l='MpServer', x=211.50, y=17.00, z=281.50], EntityCreeper['Creeper'/267, l='MpServer', x=215.99, y=14.00, z=297.79], EntitySkeleton['Skeleton'/268, l='MpServer', x=209.50, y=16.00, z=294.50], EntitySheep['Sheep'/208, l='MpServer', x=179.16, y=63.00, z=277.78], EntitySheep['Sheep'/209, l='MpServer', x=183.47, y=64.00, z=278.49], EntityZombie['Zombie'/210, l='MpServer', x=187.50, y=17.00, z=292.50], EntityZombie['Zombie'/211, l='MpServer', x=187.50, y=17.00, z=293.50], EntitySkeleton['Skeleton'/212, l='MpServer', x=180.50, y=17.00, z=292.50], EntityClientPlayerMP['quaternary'/410, l='MpServer', x=169.30, y=65.62, z=260.11], EntityBat['Bat'/156, l='MpServer', x=136.02, y=15.00, z=235.88], EntityZombie['Zombie'/157, l='MpServer', x=130.50, y=38.00, z=233.50], EntityZombie['Zombie'/158, l='MpServer', x=131.50, y=38.00, z=237.50], EntityZombie['Zombie'/159, l='MpServer', x=135.50, y=38.00, z=231.50], EntitySheep['Sheep'/160, l='MpServer', x=128.50, y=67.00, z=230.50], EntitySheep['Sheep'/161, l='MpServer', x=133.19, y=66.00, z=234.78], EntitySheep['Sheep'/162, l='MpServer', x=132.50, y=67.00, z=228.50], EntitySheep['Sheep'/163, l='MpServer', x=134.50, y=67.00, z=227.50], EntityEnderman['Enderman'/164, l='MpServer', x=139.50, y=23.00, z=250.50], EntitySheep['Sheep'/165, l='MpServer', x=142.72, y=64.00, z=249.13], EntitySheep['Sheep'/166, l='MpServer', x=140.51, y=64.00, z=250.80], EntitySheep['Sheep'/167, l='MpServer', x=141.50, y=64.00, z=249.59], EntitySheep['Sheep'/236, l='MpServer', x=192.63, y=63.00, z=287.84], EntitySheep['Sheep'/237, l='MpServer', x=195.50, y=63.00, z=286.50], EntitySheep['Sheep'/178, l='MpServer', x=145.38, y=64.00, z=239.22], EntitySheep['Sheep'/179, l='MpServer', x=159.50, y=63.00, z=272.50], EntitySheep['Sheep'/180, l='MpServer', x=158.50, y=63.00, z=275.50], EntitySheep['Sheep'/181, l='MpServer', x=150.19, y=64.00, z=280.38], EntitySheep['Sheep'/183, l='MpServer', x=161.50, y=63.00, z=273.50]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:441)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2414)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:776)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.5.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_402, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 660387848 bytes (629 MB) / 780140544 bytes (744 MB) up to 7615283200 bytes (7262 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 12806 (717136 bytes; 0 MB) allocated, 244 (13664 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 3, tallocated: 63
+	FML: MCP v7.51 FML v5.2.23.738 Minecraft Forge 7.8.1.738 8 mods loaded, 8 mods active
+	mcp{7.51} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{5.2.23.738} [Forge Mod Loader] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{7.8.1.738} [Minecraft Forge] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHFramework{1.5.2.5} [CoFH Framework] (coremods) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{1.117.385-lf} [IndustrialCraft 2] (industrialcraft-2_1.117.385-lf.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	mod_BlockHelper{1.2.0-pre3} [Block Helper] (BlockHelper-1.5.2-1.2.0-pre3-dev.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHWorld{1.5.2.5} [CoFHWorld] (CoFHCore-1.5.2.5.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	CoFHCore{1.5.2.5} [CoFHCore] (CoFHCore-1.5.2.5.jar-mapped-net.minecraftforge_forge_1.5.2-7.8.1.738.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	LWJGL: 2.9.0
+	OpenGL: NVIDIA GeForce RTX 3060/PCIe/SSE2 GL version 4.6.0 NVIDIA 552.12, NVIDIA Corporation
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 461 (25816 bytes; 0 MB) allocated, 54 (3024 bytes; 0 MB) used

@@ -1,0 +1,24 @@
+
+  // access flags 0x1
+  public test(I)V
+   L0
+    LINENUMBER 31 L0
+    ALOAD 0
+    GETFIELD codechicken/core/asm/ASMDev.perp : Lcodechicken/core/asm/ASMDev$Test;
+    IFNULL L1
+   L2
+    LINENUMBER 32 L2
+    ALOAD 0
+    GETFIELD codechicken/core/asm/ASMDev.perp : Lcodechicken/core/asm/ASMDev$Test;
+    ILOAD 1
+    INVOKEVIRTUAL codechicken/core/asm/ASMDev$Test.invoke (I)V
+   L1
+    LINENUMBER 33 L1
+   FRAME SAME
+    RETURN
+   L3
+    LOCALVARIABLE this Lcodechicken/core/asm/ASMDev; L0 L3 0
+    LOCALVARIABLE c I L0 L3 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+}

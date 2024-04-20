@@ -1,0 +1,108 @@
+2024-04-20 07:44:20 [SERVER] [INFO] Starting integrated minecraft server version 1.5.2
+2024-04-20 07:44:20 [SERVER] [INFO] Generating keypair
+2024-04-20 07:44:20 [SERVER] [INFO] Converting map!
+2024-04-20 07:44:20 [SERVER] [INFO] Scanning folders...
+2024-04-20 07:44:20 [SERVER] [INFO] Total conversion count is 0
+2024-04-20 07:44:20 [SERVER] [INFO] Preparing start region for level 0
+2024-04-20 07:44:21 [SERVER] [INFO] Preparing spawn area: 41%
+2024-04-20 07:44:22 [SERVER] [INFO] Preparing spawn area: 93%
+2024-04-20 07:44:23 [SERVER] [INFO] quaternary[/127.0.0.1:0] logged in with entity id 205 at (170.5, 64.0, 259.5)
+2024-04-20 07:44:36 [SERVER] [INFO] Saving and pausing game...
+2024-04-20 07:44:36 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2024-04-20 07:44:36 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2024-04-20 07:44:36 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2024-04-20 07:44:52 [SERVER] [INFO] Saving and pausing game...
+2024-04-20 07:44:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2024-04-20 07:44:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2024-04-20 07:44:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2024-04-20 07:44:54 [SERVER] [INFO] Stopping server
+2024-04-20 07:44:54 [SERVER] [INFO] Saving players
+2024-04-20 08:56:48 [SERVER] [INFO] Starting integrated minecraft server version 1.5.2
+2024-04-20 08:56:48 [SERVER] [INFO] Generating keypair
+2024-04-20 08:56:48 [SERVER] [INFO] Preparing start region for level 0
+2024-04-20 08:56:49 [SERVER] [INFO] quaternary[/127.0.0.1:0] logged in with entity id 410 at (169.30335951536853, 64.0, 260.11274368600453)
+2024-04-20 08:56:49 [SERVER] [INFO] Stopping server
+2024-04-20 08:56:49 [SERVER] [INFO] Saving players
+2024-04-20 08:56:49 [SERVER] [INFO] Saving worlds
+2024-04-20 08:56:49 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2024-04-20 08:56:49 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2024-04-20 08:56:49 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2024-04-20 08:57:40 [SERVER] [INFO] Starting integrated minecraft server version 1.5.2
+2024-04-20 08:57:40 [SERVER] [INFO] Generating keypair
+2024-04-20 08:57:40 [SERVER] [INFO] Preparing start region for level 0
+2024-04-20 08:57:40 [SERVER] [INFO] quaternary[/127.0.0.1:0] logged in with entity id 409 at (169.30335951536853, 64.0, 260.11274368600453)
+2024-04-20 08:57:41 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:660)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:573)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:127)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:573)
+Caused by: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    net/minecraft/enchantment/EnchantmentHelper.buildEnchantmentList(Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Ljava/util/List; @7: invokestatic
+  Reason:
+    Type 'net/minecraft/item/ItemStack' (current frame, stack[1]) is not assignable to 'java/lang/Integer'
+  Current Frame:
+    bci: @7
+    flags: { }
+    locals: { 'java/util/Random', 'net/minecraft/item/ItemStack', integer, 'net/minecraft/item/Item' }
+    stack: { 'net/minecraft/item/Item', 'net/minecraft/item/ItemStack' }
+  Bytecode:
+    0x0000000: 2bb6 012a 4e2d 2bb8 015a 3604 1504 9d00
+    0x0000010: 0501 b015 0405 6c36 0404 2a15 0404 7a04
+    0x0000020: 60b6 00d9 602a 1504 047a 0460 b600 d960
+    0x0000030: 3604 1504 1c60 3605 2ab6 015e 2ab6 015e
+    0x0000040: 620c 6613 015f 6a38 0615 0586 0c17 0662
+    0x0000050: 6a13 0160 628b 3607 1507 04a2 0006 0436
+    0x0000060: 0701 3a08 1507 2bb8 0164 3a09 1909 c600
+    0x0000070: dd19 09b9 0167 0100 9a00 d32a 1909 b901
+    0x0000080: 6b01 00b8 0171 c000 853a 0a19 0ac6 00be
+    0x0000090: bb01 7359 b701 743a 0819 0819 0ab6 0178
+    0x00000a0: 5715 0736 0b2a 1032 b600 d915 0ba3 009e
+    0x00000b0: 1909 b900 6301 00b9 0069 0100 3a0c 190c
+    0x00000c0: b900 6f01 0099 005b 190c b900 7301 00c0
+    0x00000d0: 004e 3a0d 0436 0e19 08b6 0179 3a0f 190f
+    0x00000e0: b900 6f01 0099 0029 190f b900 7301 00c0
+    0x00000f0: 0085 3a10 1910 b401 49b2 00b6 190d b600
+    0x0000100: 7632 b601 7d99 0006 a7ff d603 360e 150e
+    0x0000110: 9a00 0d19 0cb9 0180 0100 a700 03a7 ffa1
+    0x0000120: 1909 b901 6701 009a 001b 2a19 09b9 016b
+    0x0000130: 0100 b801 71c0 0085 3a0d 1908 190d b601
+    0x0000140: 7857 150b 047a 360b a7ff 5d19 08b0     
+  Stackmap Table:
+    full_frame(@19,{Object[#213],Object[#21],Integer,Object[#65],Integer},{Object[#65]})
+    full_frame(@97,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer},{Object[#65]})
+    full_frame(@165,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer},{Object[#65]})
+    full_frame(@190,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    full_frame(@222,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    full_frame(@267,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107],Object[#133]},{Object[#65]})
+    full_frame(@270,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107],Object[#78],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@285,Object[#65])
+    full_frame(@288,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95],Object[#133],Integer,Object[#107]},{Object[#65]})
+    same_locals_1_stack_item_frame(@322,Object[#65])
+    full_frame(@331,{Object[#213],Object[#21],Integer,Object[#65],Integer,Integer,Float,Integer,Object[#371],Object[#95]},{Object[#65]})
+
+	at net.minecraft.entity.EntityLiving.applyPotionDamageCalculations(EntityLiving.java:1223)
+	at net.minecraft.entity.EntityLiving.damageEntity(EntityLiving.java:1256)
+	at net.minecraft.entity.EntityLiving.attackEntityFrom(EntityLiving.java:1060)
+	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:45)
+	at net.minecraft.entity.monster.EntityEnderman.attackEntityFrom(EntityEnderman.java:471)
+	at net.minecraft.entity.monster.EntityEnderman.onLivingUpdate(EntityEnderman.java:136)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:858)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:31)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2342)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:717)
+	at net.minecraft.world.World.updateEntity(World.java:2304)
+	at net.minecraft.world.World.updateEntities(World.java:2150)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:546)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:654)
+	... 4 more
+2024-04-20 08:57:41 [SERVER] [SEVERE] This crash report has been saved to: D:\Games\Minecraft\Workspace\Reforged\BlockHelper - 1.5.2\run\crash-reports\crash-2024-04-20_08.57.41-server.txt
+2024-04-20 08:57:41 [SERVER] [INFO] Stopping server
+2024-04-20 08:57:41 [SERVER] [INFO] Saving players
+2024-04-20 08:57:41 [SERVER] [INFO] Saving worlds
+2024-04-20 08:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2024-04-20 08:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2024-04-20 08:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/The End
